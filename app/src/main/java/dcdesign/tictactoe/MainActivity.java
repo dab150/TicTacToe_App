@@ -79,16 +79,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         else
             ((TextView) findViewById(R.id.lblActivePlayer)).setText(String.valueOf(""));
 
-        //check for a winner
-        if (gameBoard.isGameWon())
-        {
-            ((TextView) findViewById(R.id.lblActivePlayer)).setText(String.valueOf(gameBoard._winnerName + " has won!"));
-        }
-
         //check for a tie
         if(gameBoard.isGameTied())
         {
             ((TextView) findViewById(R.id.lblActivePlayer)).setText(String.valueOf("Game is a Tie!"));
+        }
+
+        //check for a winner
+        if (gameBoard.isGameWon())
+        {
+            ((TextView) findViewById(R.id.lblActivePlayer)).setText(String.valueOf(gameBoard._winnerName + " has won!"));
         }
 
         //refresh values of boxes
